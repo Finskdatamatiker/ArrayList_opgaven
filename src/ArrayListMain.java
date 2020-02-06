@@ -3,28 +3,22 @@ public class ArrayListMain {
         FinskArrayList finskArrayList = new FinskArrayList();
 
         finskArrayList.add(3);
-        System.out.println("add value 3: " + finskArrayList.toString());
-
         finskArrayList.add(5);
-        System.out.println("add value 5: " + finskArrayList.toString());
-
         finskArrayList.add(8);
-        System.out.println("add value 8: " + finskArrayList.toString());
-
         finskArrayList.add(2);
-        System.out.println("add value 2: " + finskArrayList.toString());
+        System.out.println(finskArrayList.toString());
 
         try {
             finskArrayList.remove(5);
         }catch (IndexOutOfBoundsException ie){
-            System.out.println("\nugyldig index, element kan ikke slettes " + ie + "\n");
+            System.out.println("ugyldig index, element kan ikke slettes " + ie);
         }
 
         try {
             finskArrayList.addTilIndex(1, 7);
             System.out.println("add value 7 i index 1: " + finskArrayList.toString());
         }catch (IndexOutOfBoundsException ie){
-            System.out.println("\nugyldig index, element kan ikke tilføjes " + ie + "\n");
+            System.out.println("ugyldig index, element kan ikke tilføjes " + ie);
         }
 
         finskArrayList.remove(2);
@@ -37,7 +31,7 @@ public class ArrayListMain {
             finskArrayList.addTilIndex(4, 8);
             System.out.println("add value 8 i index 4: " + finskArrayList.toString());
         }catch (IndexOutOfBoundsException ie){
-            System.out.println("\nugyldig index, element kan ikke tilføjes " + ie + "\n");
+            System.out.println("ugyldig index, element kan ikke tilføjes " + ie);
         }
 
         finskArrayList.add(4);
